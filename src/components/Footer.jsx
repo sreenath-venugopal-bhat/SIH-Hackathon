@@ -36,16 +36,6 @@ const Footer = () => {
                 Awareness
               </a>
             </li>
-            <li>
-              <a href="/pickup-request" className="hover:underline">
-                Pickup Request
-              </a>
-            </li>
-            <li>
-              <a href="/dashboard" className="hover:underline">
-                Dashboard
-              </a>
-            </li>
           </ul>
         </div>
 

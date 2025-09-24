@@ -2,6 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import { MapPin, BookOpen, Truck, ArrowRight, Sparkles } from "lucide-react";
+import { Link } from 'react-router-dom';
 
 const FeaturesSection = () => {
   const navigate = useNavigate();
@@ -136,13 +137,7 @@ const FeaturesSection = () => {
                 </p>
 
                 {/* CTA Button */}
-                <motion.div
-                  whileHover={{ x: 5 }}
-                  className="inline-flex items-center text-emerald-600 font-semibold group-hover:text-emerald-700 transition-colors duration-300"
-                >
-                  Explore Feature
-                  <ArrowRight size={18} className="ml-2 group-hover:translate-x-1 transition-transform duration-300" />
-                </motion.div>
+                
 
                 {/* Decorative corner */}
                 <div className={`absolute top-0 right-0 w-16 h-16 bg-gradient-to-bl ${feature.color} rounded-tr-3xl rounded-bl-3xl opacity-0 group-hover:opacity-10 transition-opacity duration-300`} />
@@ -185,13 +180,19 @@ const FeaturesSection = () => {
           className="text-center mt-16"
         >
           <p className="text-gray-600 mb-6">Ready to make a difference?</p>
-          <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="px-8 py-3 bg-gradient-to-r from-emerald-500 to-green-600 text-white font-semibold rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border-2 border-emerald-400/50"
-          >
-            Get Started Today
-          </motion.button>
+
+
+
+
+<Link to="/awareness">
+  <motion.button
+    whileHover={{ scale: 1.05 }}
+    whileTap={{ scale: 0.95 }}
+    className="px-8 py-3 bg-gradient-to-r from-emerald-500 to-green-600 text-white font-semibold rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border-2 border-emerald-400/50"
+  >
+    Awareness Hub
+  </motion.button>
+</Link>
         </motion.div>
       </div>
     </section>

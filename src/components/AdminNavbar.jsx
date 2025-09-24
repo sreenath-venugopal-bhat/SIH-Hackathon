@@ -6,7 +6,10 @@ import {
   ArrowLeftOnRectangleIcon,
   Bars3Icon,
   XMarkIcon,
+  ChartPieIcon, // <-- New Icon
+  UserPlusIcon, // <-- New Icon
 } from "@heroicons/react/24/solid";
+import Logo from "../assets/lg1-white.png";
 
 export default function ResponsiveNavbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -28,11 +31,12 @@ export default function ResponsiveNavbar() {
     <nav className="w-full bg-emerald-900 text-white shadow-md relative z-10">
       <div className="mx-auto px-6 h-20 flex items-center justify-between">
         {/* Header */}
-        <div>
+        <div className="flex items-center gap-[1rem]">
+          <img src={Logo} alt="EcoDesh Logo" className="h-10 w-auto" />
           <h1 className="text-2xl font-bold">EcoDesh</h1>
         </div>
 
-        {/* Desktop Nav Links - Centered */}
+        {/* --- MODIFIED: Desktop Nav Links --- */}
         <div className="hidden md:flex items-center">
           <NavLink
             to="/admin/complaints"
@@ -47,6 +51,21 @@ export default function ResponsiveNavbar() {
           >
             <MapPinIcon className="h-5 w-5 mr-2" />
             <span>Set Bin Locations</span>
+          </NavLink>
+          {/* --- NEW LINKS --- */}
+          <NavLink
+            to="/admin/analytics"
+            className={({ isActive }) => navLinkClass(isActive)}
+          >
+            <ChartPieIcon className="h-5 w-5 mr-2" />
+            <span>Analytics</span>
+          </NavLink>
+          <NavLink
+            to="/admin/add-admin"
+            className={({ isActive }) => navLinkClass(isActive)}
+          >
+            <UserPlusIcon className="h-5 w-5 mr-2" />
+            <span>Add Admin</span>
           </NavLink>
         </div>
 
@@ -73,7 +92,7 @@ export default function ResponsiveNavbar() {
         </div>
       </div>
 
-      {/* Mobile Menu Dropdown */}
+      {/* --- MODIFIED: Mobile Menu Dropdown --- */}
       {isMenuOpen && (
         <div className="md:hidden bg-emerald-900 px-4 pb-4 border-t border-emerald-800">
           <NavLink
@@ -91,6 +110,23 @@ export default function ResponsiveNavbar() {
           >
             <MapPinIcon className="h-5 w-5 mr-3" />
             <span>Set Bin Locations</span>
+          </NavLink>
+          {/* --- NEW LINKS --- */}
+          <NavLink
+            to="/admin/analytics"
+            className={({ isActive }) => mobileNavLinkClass(isActive)}
+            onClick={() => setIsMenuOpen(false)}
+          >
+            <ChartPieIcon className="h-5 w-5 mr-3" />
+            <span>Analytics</span>
+          </NavLink>
+          <NavLink
+            to="/admin/add-admin"
+            className={({ isActive }) => mobileNavLinkClass(isActive)}
+            onClick={() => setIsMenuОpen(false)}
+          >
+            <UserPlusIcon className="h-5 w-5 mr-3" />
+            <span>Add Admin</span>
           </NavLink>
           <div className="mt-2 border-t border-emerald-800 pt-2">
             <button className={mobileNavLinkClass(false) + " w-full"}>

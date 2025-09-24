@@ -30,7 +30,7 @@ const HeroSection = () => {
   ];
 
   return (
-    <section className="relative min-h-screen overflow-hidden bg-gradient-to-br from-emerald-500 via-green-500 to-teal-500 flex items-center justify-center py-20 px-6">
+    <section className="relative min-h-screen overflow-hidden bg-[#0A3D2E] from-emerald-500 via-green-500 to-teal-500 flex items-center justify-center py-20 px-6">
       {/* Enhanced background with lighter colors */}
       <div className="absolute inset-0">
         {/* Animated gradient background */}
@@ -172,13 +172,13 @@ const HeroSection = () => {
             transition={{ delay: 0.9, duration: 0.6 }}
             className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
           >
-            <Button className="group px-8 py-4 bg-gradient-to-r from-yellow-300 to-yellow-400 text-green-800 font-bold rounded-2xl hover:from-yellow-200 hover:to-yellow-300 transform hover:scale-105 transition-all duration-300 shadow-2xl shadow-yellow-400/40 border-2 border-yellow-200/50">
+            <Button className="curosor-pointer flex items-center group px-8 py-4 bg-[#0F5257] text-green-800 font-bold rounded-2xl hover:from-yellow-200 hover:to-yellow-300 transform hover:scale-105 transition-all duration-400 shadow-2xl shadow-yellow-400/40 border-2 cursor-pointer">
               View Analytics Dashboard
               <ArrowRight size={20} className="ml-2 group-hover:translate-x-1 transition-transform" />
             </Button>
             <Button
               variant="outline"
-              className="px-8 py-4 border-2 border-white/40 bg-white/10 backdrop-blur-md text-white rounded-2xl font-bold hover:bg-white/20 hover:border-white/60 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl"
+              className="px-8 py-4 border-2 border-white/40 bg-white/10 backdrop-blur-md text-white rounded-2xl font-bold hover:bg-white/20 hover:border-white/60 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl cursor-pointer"
             >
               Explore Features
             </Button>
